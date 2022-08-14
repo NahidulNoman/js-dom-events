@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice-DOM</title>
+    <style>
+        body{
+            margin: auto;
+            text-align: center;
+            width: 550px;
+            margin-top: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">I Deleted this file right now !!!</h1>
+    <input id="text-area" type="text" placeholder="Please enter delete"> <br> <br>
+    <button id="deleted" disabled>delete</button>
+    <script>
+        document.getElementById('text-area').addEventListener('keyup',function(even){
+            let text = even.target.value;
+            let deletedButton = document.getElementById('deleted');
+            if(text === 'delete'){
+                deletedButton.removeAttribute('disabled')
+            }
+            else{
+                deletedButton.setAttribute('disabled',true)
+            }
+        })
+        document.getElementById('deleted').addEventListener('click',function(){
+            let header = document.getElementById('heading');
+            header.style.display = 'none';
+            document.getElementById('text-area').value = '';
+            document.getElementById('deleted').setAttribute('disabled',true)
+        })
+    </script>
+</body>
+</html>

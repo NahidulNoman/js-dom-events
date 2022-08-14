@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even-Practice</title>
+    <style>
+        body{
+            margin: auto;
+            text-align: center;
+            width: 550px;
+        }
+    </style>
+</head>
+<body>
+   <div id="all-text-here">
+    <h1>This is our new Projects in Dom JavaScript!!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam iusto eaque iste modi enim eos ipsa exercitationem assumenda, ex ipsum a molestias? Eum et at a quam officiis eius voluptatibus!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, accusantium consequatur culpa quasi velit molestias doloremque reprehenderit officiis sequi assumenda mollitia eligendi ea neque, ipsum cumque suscipit. Unde, totam culpa.</p>
+    </div>
+    <textarea name="" id="this-text" cols="60" rows="5"></textarea> <br> <br>
+    <button id="make-comment">Make Comment</button>
+   
+
+    <script>
+        document.getElementById('make-comment').addEventListener('click',function(){
+            const textArea = document.getElementById('this-text');
+            const newTextArea = textArea.value;
+            
+            const allFileHere = document.getElementById('all-text-here');
+            const paragraph = document.createElement('p');
+            paragraph.innerText = newTextArea;
+            allFileHere.appendChild(paragraph);
+            textArea.value = '';
+        })
+    </script>
+</body>
+</html>
