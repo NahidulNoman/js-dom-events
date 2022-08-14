@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Handler</title>
+</head>
+<body>
+    <h1 id="change">This is make for using html.And some text here!!</h1>
+    <p id="default-text">This is default text.</p>
+    <input id="input-field" type="text"> 
+    <button id="button">update</button> <br> <br>
+    <button onclick="changeEvent()">change-event</button>
+    <button id="this-can">This can change!</button>
+    <script src="js/handler.js"></script>
+    <script>
+       document.getElementById('button').addEventListener('click', function(){
+        let input = document.getElementById('input-field');
+        let orderInput = input.value;
+
+        let p = document.getElementById('default-text');
+        p.innerText = orderInput;
+        input.value = '';
+       })
+    </script>
+</body>
+</html>
