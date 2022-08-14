@@ -1,7 +1,7 @@
 document.getElementById('input-text').addEventListener('keyup',function(event){
     let text = event.target.value;
     let deleteButton = document.getElementById('button');
-    if(text === 'delete'){
+    if(text === 'Delete'){
         deleteButton.removeAttribute('disabled');
     }
     else{
@@ -10,5 +10,7 @@ document.getElementById('input-text').addEventListener('keyup',function(event){
 })
 document.getElementById('button').addEventListener('click',function(){
     let thisText = document.getElementById('this-text');
-    thisText.style.display = 'none'
+    thisText.style.display = 'none';
+    document.getElementById('input-text').value = '';
+    document.getElementById('button').setAttribute('disabled',true)
 })
