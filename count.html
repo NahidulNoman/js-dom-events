@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count</title>
+    <style>
+        body{
+            margin: auto;
+            text-align: center;
+            margin-top: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">0</h1>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+    <script>
+        let count = 0;
+        let btnButton = document.getElementById('plus');
+        btnButton.addEventListener('click',function(){
+            count++;
+            document.getElementById('heading').innerText = count;
+        })
+        let btnMinus = document.getElementById('minus');
+        btnMinus.addEventListener('click',function(){
+            count--;
+            document.getElementById('heading').innerText = count;
+        })
+    </script>
+</body>
+</html>
